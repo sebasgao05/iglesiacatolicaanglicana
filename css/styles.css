@@ -1,0 +1,44 @@
+:root {
+    --color-principal: #1F2A44;
+    --color-secundario: #6C1E1E;
+    --color-acento: #B49A67;
+}
+
+/* GENERAL */
+body {
+    font-family: 'EB Garamond', serif;
+    color: #333;
+    background-color: #fff;
+    margin-top: 70px; /* espacio para navbar fija */
+}
+
+/* NAVBAR */
+.nav-link {
+    color: #333 !important;
+    transition: 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-secundario) !important;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-principal);
+    color: white;
+    font-size: 0.9rem;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Iglesia Católica Anglicana</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+    <!-- HEADER -->
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <img src="img/logo/ACC-Logo.png" alt="Logo ACC" width="40" class="me-2">Iglesia Católica Anglicana
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                    <li class="nav-item"><a href="noticias.html" class="nav-link active">Noticias</a></li>
+                    <li class="nav-item"><a href="recursos.html" class="nav-link">Recursos</a></li>
+                    <li class="nav-item"><a href="diocesis.html" class="nav-link">Diócesis</a></li>
+                    <li class="nav-item"><a href="vocaciones.html" class="nav-link">Vocaciones</a></li>
+                    <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+
+    <main class="container py-5 mt-5 pt-4">
+        <h1 class="text-center mb-5">Noticias y Eventos</h1>
+
+        <!-- Contenido dinámico de noticias -->
+        <div id="noticias-container" class="row g-4">
+            <!-- Mensaje genérico cuando no hay noticias -->
+            <div id="no-noticias" class="col-12">
+                <div class="card border-info">
+                    <div class="card-body text-center py-5">
+                        <div class="mb-4">
+                            <i class="fas fa-calendar-alt" style="font-size: 5rem; color: #0dcaf0;"></i>
+                        </div>
+                        <h2 class="text-info mb-4">📅 Próximamente: Noticias y Eventos</h2>
+                        <p class="lead text-muted mb-4">Estamos preparando contenido especial para mantener informada a nuestra comunidad de fe.</p>
+                        
+                        <div class="row justify-content-center mb-4">
+                            <div class="col-lg-8">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-church text-primary mb-2" style="font-size: 2rem;"></i>
+                                                <h5>Celebraciones Litúrgicas</h5>
+                                                <p class="small mb-0">Horarios de misas y festividades especiales</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-users text-success mb-2" style="font-size: 2rem;"></i>
+                                                <h5>Actividades Comunitarias</h5>
+                                                <p class="small mb-0">Eventos de formación y convivencia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-graduation-cap text-warning mb-2" style="font-size: 2rem;"></i>
+                                                <h5>Formación Espiritual</h5>
+                                                <p class="small mb-0">Cursos, retiros y conferencias</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="card bg-light">
+                                            <div class="card-body text-center">
+                                                <i class="fas fa-bullhorn text-danger mb-2" style="font-size: 2rem;"></i>
+                                                <h5>Anuncios Importantes</h5>
+                                                <p class="small mb-0">Comunicados oficiales de la diócesis</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-primary" role="alert">
+                            <h5 class="alert-heading">🔔 ¡Manténte Informado!</h5>
+                            <p class="mb-0">Mientras preparamos nuestro sistema de noticias, te invitamos a contactarnos directamente para conocer sobre nuestras actividades y celebraciones.</p>
+                        </div>
+                        
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="contacto.html" class="btn btn-primary btn-lg">
+                                <i class="fas fa-envelope"></i> Contáctanos
+                            </a>
+                            <a href="diocesis.html" class="btn btn-outline-info btn-lg">
+                                <i class="fas fa-map-marker-alt"></i> Nuestras Iglesias
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Aquí se cargarán las noticias dinámicamente desde la base de datos -->
+        </div>
+        
+        <!-- Paginación (se mostrará cuando haya noticias) -->
+        <nav id="paginacion" class="mt-5" style="display: none;">
+            <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#">Anterior</a>
+                </li>
+                <li class="page-item active">
+                    <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Siguiente</a>
+                </li>
+            </ul>
+        </nav>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p class="mb-0">© 2025 Iglesia Católica Anglicana ACC | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Función para cargar todas las noticias desde la base de datos
+        function cargarTodasLasNoticias() {
+            // Aquí se hará la llamada a la API/base de datos
+            // fetch('/api/noticias')
+            //   .then(response => response.json())
+            //   .then(noticias => mostrarTodasLasNoticias(noticias))
+            //   .catch(error => console.error('Error:', error));
+            
+            // Por ahora, simular que no hay noticias
+            const noticias = []; // Cambiar por datos reales de la API
+            mostrarTodasLasNoticias(noticias);
+        }
+        
+        function mostrarTodasLasNoticias(noticias) {
+            const container = document.getElementById('noticias-container');
+            const noNoticias = document.getElementById('no-noticias');
+            const paginacion = document.getElementById('paginacion');
+            
+            if (noticias.length === 0) {
+                // Mostrar mensaje genérico
+                noNoticias.style.display = 'block';
+                paginacion.style.display = 'none';
+            } else {
+                // Ocultar mensaje genérico y mostrar noticias
+                noNoticias.style.display = 'none';
+                paginacion.style.display = 'block';
+                
+                // Limpiar noticias anteriores
+                const noticiasItems = container.querySelectorAll('.noticia-item');
+                noticiasItems.forEach(item => item.remove());
+                
+                // Agregar todas las noticias
+                noticias.forEach(noticia => {
+                    const noticiaHTML = `
+                        <div class="col-lg-4 col-md-6 noticia-item">
+                            <div class="card h-100 shadow-sm">
+                                <img src="${noticia.imagen}" class="card-img-top" alt="${noticia.titulo}" style="height: 200px; object-fit: cover;">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">${noticia.titulo}</h5>
+                                    <p class="card-text flex-grow-1">${noticia.resumen}</p>
+                                    <div class="mt-auto">
+                                        <small class="text-muted">
+                                            <i class="fas fa-calendar"></i> ${noticia.fecha}
+                                        </small>
+                                        <div class="mt-2">
+                                            <a href="#" class="btn btn-primary btn-sm">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.insertAdjacentHTML('beforeend', noticiaHTML);
+                });
+            }
+        }
+        
+        // Cargar noticias al cargar la página
+        document.addEventListener('DOMContentLoaded', cargarTodasLasNoticias);
+    </script>
+</body>
+</html>
