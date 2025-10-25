@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noticias - Iglesia Católica Anglicana</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../img/logo/ACC-Logo.png" alt="ACC Logo">
+                Iglesia Católica Anglicana
+            </a>
+            <button class="navbar-toggle">
+                ☰
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="diocesis.html" class="nav-link">Diócesis</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link">Noticias</a></li>
+                <li class="nav-item"><a href="vocaciones.html" class="nav-link">Vocaciones</a></li>
+                <li class="nav-item"><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container py-5">
+            <h1 class="text-center mb-5">Noticias y Eventos</h1>
+
+            <!-- Contenido dinámico de noticias -->
+            <div id="noticias-container" class="row">
+                <!-- Mensaje genérico cuando no hay noticias -->
+                <div id="no-noticias" class="col-12">
+                    <div class="card">
+                        <div class="card-body text-center py-5">
+                            <div class="mb-4">
+                                <span style="font-size: 5rem;">📅</span>
+                            </div>
+                            <h2 class="text-primary mb-4">Próximamente: Noticias y Eventos</h2>
+                            <p class="lead text-muted mb-4">Estamos preparando contenido especial para mantener informada a nuestra comunidad de fe.</p>
+                            
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span style="font-size: 2rem;">⛪</span>
+                                            <h5>Celebraciones Litúrgicas</h5>
+                                            <p class="mb-0">Horarios de misas y festividades especiales</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span style="font-size: 2rem;">👥</span>
+                                            <h5>Actividades Comunitarias</h5>
+                                            <p class="mb-0">Eventos de formación y convivencia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span style="font-size: 2rem;">🎓</span>
+                                            <h5>Formación Espiritual</h5>
+                                            <p class="mb-0">Cursos, retiros y conferencias</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-body text-center">
+                                            <span style="font-size: 2rem;">📢</span>
+                                            <h5>Anuncios Importantes</h5>
+                                            <p class="mb-0">Comunicados oficiales de la diócesis</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alert alert-info">
+                                <h5>🔔 ¡Manténte Informado!</h5>
+                                <p class="mb-0">Mientras preparamos nuestro sistema de noticias, te invitamos a contactarnos directamente para conocer sobre nuestras actividades y celebraciones.</p>
+                            </div>
+                            
+                            <div class="text-center">
+                                <a href="contacto.html" class="btn btn-primary btn-lg mr-3">
+                                    📧 Contáctanos
+                                </a>
+                                <a href="diocesis.html" class="btn btn-outline-primary btn-lg">
+                                    📍 Nuestras Iglesias
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="mb-0">© 2025 Iglesia Católica Anglicana ACC | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Función para cargar todas las noticias desde la base de datos
+        function cargarTodasLasNoticias() {
+            // Por ahora, simular que no hay noticias
+            const noticias = []; // Cambiar por datos reales de la API
+            mostrarTodasLasNoticias(noticias);
+        }
+        
+        function mostrarTodasLasNoticias(noticias) {
+            const container = document.getElementById('noticias-container');
+            const noNoticias = document.getElementById('no-noticias');
+            
+            if (noticias.length === 0) {
+                noNoticias.style.display = 'block';
+            } else {
+                noNoticias.style.display = 'none';
+                
+                const noticiasItems = container.querySelectorAll('.noticia-item');
+                noticiasItems.forEach(item => item.remove());
+                
+                noticias.forEach(noticia => {
+                    const noticiaHTML = `
+                        <div class="col-md-4 noticia-item">
+                            <div class="card">
+                                <img src="${noticia.imagen}" class="card-img-top" alt="${noticia.titulo}">
+                                <div class="card-body">
+                                    <h5 class="card-title">${noticia.titulo}</h5>
+                                    <p class="card-text">${noticia.resumen}</p>
+                                    <small class="text-muted">📅 ${noticia.fecha}</small>
+                                    <div class="mt-2">
+                                        <a href="#" class="btn btn-primary">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    container.insertAdjacentHTML('beforeend', noticiaHTML);
+                });
+            }
+        }
+        
+        // Cargar noticias al cargar la página
+        document.addEventListener('DOMContentLoaded', cargarTodasLasNoticias);
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocaciones - Iglesia Católica Anglicana</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="../index.html" class="navbar-brand">
+                <img src="../img/logo/ACC-Logo.png" alt="ACC Logo">
+                Iglesia Católica Anglicana
+            </a>
+            <button class="navbar-toggle">
+                ☰
+            </button>
+            <ul class="navbar-nav">
+                <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="diocesis.html" class="nav-link">Diócesis</a></li>
+                <li class="nav-item"><a href="noticias.html" class="nav-link">Noticias</a></li>
+                <li class="nav-item"><a href="vocaciones.html" class="nav-link">Vocaciones</a></li>
+                <li class="nav-item"><a href="recursos.html" class="nav-link">Recursos</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container py-5">
+            <h1 class="text-center mb-4">Contáctanos</h1>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full">Enviar</button>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <p class="mb-0">© 2025 Iglesia Católica Anglicana ACC | Todos los derechos reservados</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
